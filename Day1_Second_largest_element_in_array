@@ -1,0 +1,24 @@
+class Solution:
+
+	def print2largest(self,arr, n):
+	    if n==1:
+	        return -1
+	    
+	    lar=float('-inf')
+	    slar=float('-inf')
+	        
+	    for i in range(n):
+	        if arr[i]>lar:
+	            slar=lar
+	            lar=arr[i]
+	        elif arr[i]>slar and arr[i]<lar:
+	            slar=arr[i]
+	    if slar>float('-inf'):
+	        return slar
+	    else:
+	        return -1
+	        
+
+
+		
+
